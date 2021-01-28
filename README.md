@@ -252,7 +252,10 @@ personDF.rdd // returns RDD[Row] , does not returns RDD[Person]
 ## Các nguồn tham khảo:
 
 [https://spark.apache.org/docs/latest/configuration.html#spark-properties](https://spark.apache.org/docs/latest/configuration.html#spark-properties)
+
 [https://www.it-swarm-vi.com/vi/apache-spark/su-khac-biet-giua-dataframe-dataset-va-rdd-trong-spark/1054639227/](https://www.it-swarm-vi.com/vi/apache-spark/su-khac-biet-giua-dataframe-dataset-va-rdd-trong-spark/1054639227/)
+
 [https://laptrinh.vn/books/apache-spark/page/apache-spark-rdd](https://laptrinh.vn/books/apache-spark/page/apache-spark-rdd)
+
 [https://helpex.vn/article/rdd-trong-spark-la-gi-va-tai-sao-chung-ta-can-no-5c6afe5bae03f628d053a84c](https://helpex.vn/article/rdd-trong-spark-la-gi-va-tai-sao-chung-ta-can-no-5c6afe5bae03f628d053a84c)
 
