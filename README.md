@@ -1,6 +1,4 @@
-Nguyễn Trong Tân - 51603283
-
-# ![](RackMultipart20210128-4-1qj3e0_html_12c68a306560710d.gif)SPARK PROPERTIES (THUỘC TÍNH SPARK)
+# SPARK PROPERTIES (THUỘC TÍNH SPARK)
 
 Thuộc tính Spark kiểm soát hầu hết các cài đặt ứng dụng và được cấu hình riêng cho từng ứng dụng. Các thuộc tính này có thể được đặt trực tiếp trên SparkConf được chuyển tới SparkContext của bạn. SparkConf cho phép bạn định cấu hình một số thuộc tính phổ biến (ví dụ: URL chính và tên ứng dụng), cũng như các cặp khóa-giá trị tùy ý thông qua phương thức set (). Ví dụ: chúng ta có thể khởi tạo một ứng dụng với hai luồng như sau:
 
@@ -30,7 +28,7 @@ Trong khi các số không có đơn vị thường được hiểu là byte, m�
 
 Trong một số trường hợp, bạn có thể muốn tránh mã hóa cứng các cấu hình nhất định trong SparkConf. Ví dụ: nếu bạn muốn chạy cùng một ứng dụng với các bản chính khác nhau hoặc số lượng bộ nhớ khác nhau. Spark cho phép bạn chỉ cần tạo một conf trống:
 
-![](RackMultipart20210128-4-1qj3e0_html_12c68a306560710d.gif)valsc=newSparkContext(newSparkConf())
+valsc=newSparkContext(newSparkConf())
 
 Sau đó, bạn có thể cung cấp các giá trị cấu hình trong thời gian chạy:
 
@@ -54,7 +52,7 @@ Các thuộc tính của Spark chủ yếu có thể được chia thành hai lo
 
 ## Xem thuộc tính Spark
 
-![](RackMultipart20210128-4-1qj3e0_html_12c68a306560710d.gif) Giao diện người dùng web ứng dụng tại http: // \&lt;driver\&gt;: 4040 liệt kê các thuộc tính Spark trong tab &quot;Môi trường&quot;. Đây là một nơi hữu ích để kiểm tra để đảm bảo rằng các thuộc tính của bạn đã được đặt chính xác. Lưu ý rằng chỉ các giá trị được chỉ định rõ ràng thông qua spark-defaults.conf, SparkConf hoặc dòng lệnh mới xuất hiện. Đối với tất cả các thuộc tính cấu hình khác, bạn có thể giả sử giá trị mặc định được sử dụng.
+Giao diện người dùng web ứng dụng tại http: // \&lt;driver\&gt;: 4040 liệt kê các thuộc tính Spark trong tab &quot;Môi trường&quot;. Đây là một nơi hữu ích để kiểm tra để đảm bảo rằng các thuộc tính của bạn đã được đặt chính xác. Lưu ý rằng chỉ các giá trị được chỉ định rõ ràng thông qua spark-defaults.conf, SparkConf hoặc dòng lệnh mới xuất hiện. Đối với tất cả các thuộc tính cấu hình khác, bạn có thể giả sử giá trị mặc định được sử dụng.
 
 ## Thuộc tính có sẵn
 
@@ -66,11 +64,11 @@ Khi nói đến điện toán phân tán lặp, tức là xử lý dữ liệu q
 
 Có một vấn đề tiềm ẩn với việc tái sử dụng dữ liệu hoặc chia sẻ dữ liệu trong các hệ thống máy tính phân tán hiện có (như MapReduce) và đó là, bạn cần lưu trữ dữ liệu trong một số cửa hàng phân tán ổn định trung gian như HDFS hoặc Amazon S3. Điều này làm cho việc tính toán tổng thể các công việc chậm hơn vì nó liên quan đến nhiều hoạt động IO, sao chép và tuần tự hóa trong quy trình.
 
-![](RackMultipart20210128-4-1qj3e0_html_1f7499b48eede04c.png)
+![](RackMultipart20210128-4-rq5wjb_html_1f7499b48eede04c.png)
 
 ## Thực thi trên MapRedure
 
-![](RackMultipart20210128-4-1qj3e0_html_12c68a306560710d.gif)MapReduce được áp dụng rộng rãi để xử lý và tạo các bộ dữ liệu lớn với thuật toán xử lý phân tán song song trên một cụm. Nó cho phép người dùng viết các tính toán song song, sử dụng một tập hợp các toán tử cấp cao, mà không phải lo lắng về xử lý/phân phối công việc và khả năng chịu lỗi.
+MapReduce được áp dụng rộng rãi để xử lý và tạo các bộ dữ liệu lớn với thuật toán xử lý phân tán song song trên một cụm. Nó cho phép người dùng viết các tính toán song song, sử dụng một tập hợp các toán tử cấp cao, mà không phải lo lắng về xử lý/phân phối công việc và khả năng chịu lỗi.
 
 Tuy nhiên, trong hầu hết các framework hiện tại, cách duy nhất để sử dụng lại dữ liệu giữa các tính toán (Ví dụ: giữa hai công việc MapReduce) là ghi nó vào storage (Ví dụ: HDFS). Mặc dù framework này cung cấp nhiều hàm thư viện để truy cập vào tài nguyên tính toán của cụm Cluster, điều đó vẫn là chưa đủ.
 
@@ -78,23 +76,23 @@ Cả hai ứng dụng Lặp (Iterative) và Tương tác (Interactive) đều y�
 
 **- Iterative Operation trên MapReduce:**
 
-[![](RackMultipart20210128-4-1qj3e0_html_b84b4813d92f827d.jpg)](https://laptrinh.vn/uploads/images/gallery/2019-10/iterative_operations_on_mapreduce.jpg)
+[![](RackMultipart20210128-4-rq5wjb_html_b84b4813d92f827d.jpg)](https://laptrinh.vn/uploads/images/gallery/2019-10/iterative_operations_on_mapreduce.jpg)
 
 **- Interactive Operations trên MapReduce:**
 
-[![](RackMultipart20210128-4-1qj3e0_html_b0375696dc2ecaf0.jpg)](https://laptrinh.vn/uploads/images/gallery/2019-10/interactive_operations_on_mapreduce.jpg)
+[![](RackMultipart20210128-4-rq5wjb_html_b0375696dc2ecaf0.jpg)](https://laptrinh.vn/uploads/images/gallery/2019-10/interactive_operations_on_mapreduce.jpg)
 
 ## Thực thi trên Spark RDD
 
-![](RackMultipart20210128-4-1qj3e0_html_12c68a306560710d.gif)Để khắc phục được vấn đề về MapRedure, các nhà nghiên cứu đã phát triển một framework chuyên biệt gọi là Apache Spark. Ý tưởng chính của Spark là Resilient Distributed Datasets (RDD); nó hỗ trợ tính toán xử lý trong bộ nhớ. Điều này có nghĩa, nó lưu trữ trạng thái của bộ nhớ dưới dạng một đối tượng trên các công việc và đối tượng có thể chia sẻ giữa các công việc đó. Việc xử lý dữ liệu trong bộ nhớ nhanh hơn 10 đến 100 lần so với network và disk.
+Để khắc phục được vấn đề về MapRedure, các nhà nghiên cứu đã phát triển một framework chuyên biệt gọi là Apache Spark. Ý tưởng chính của Spark là Resilient Distributed Datasets (RDD); nó hỗ trợ tính toán xử lý trong bộ nhớ. Điều này có nghĩa, nó lưu trữ trạng thái của bộ nhớ dưới dạng một đối tượng trên các công việc và đối tượng có thể chia sẻ giữa các công việc đó. Việc xử lý dữ liệu trong bộ nhớ nhanh hơn 10 đến 100 lần so với network và disk.
 
 **- Iterative Operation trên Spark RDD:**
 
-[![](RackMultipart20210128-4-1qj3e0_html_314a7b936e00dc37.jpg)](https://laptrinh.vn/uploads/images/gallery/2019-10/iterative_operations_on_spark_rdd.jpg)
+[![](RackMultipart20210128-4-rq5wjb_html_314a7b936e00dc37.jpg)](https://laptrinh.vn/uploads/images/gallery/2019-10/iterative_operations_on_spark_rdd.jpg)
 
 **- Interactive Operations trên Spark RDD:**
 
-[![](RackMultipart20210128-4-1qj3e0_html_31c6760f2cb4625c.jpg)](https://laptrinh.vn/uploads/images/gallery/2019-10/interactive_operations_on_spark_rdd.jpg)
+[![](RackMultipart20210128-4-rq5wjb_html_31c6760f2cb4625c.jpg)](https://laptrinh.vn/uploads/images/gallery/2019-10/interactive_operations_on_spark_rdd.jpg)
 
 ## Các loại RDD
 
@@ -107,9 +105,9 @@ Cả hai ứng dụng Lặp (Iterative) và Tương tác (Interactive) đều y�
 
 ## Các transformation và action với RDD
 
-![](RackMultipart20210128-4-1qj3e0_html_12c68a306560710d.gif)RDD cung cấp các transformation và action hoạt động giống như DataFrame lẫn DataSets. Transformation xử lý các thao tác lazily và Action xử lý thao tác cần xử lý tức thời.
+RDD cung cấp các transformation và action hoạt động giống như DataFrame lẫn DataSets. Transformation xử lý các thao tác lazily và Action xử lý thao tác cần xử lý tức thời.
 
-[![](RackMultipart20210128-4-1qj3e0_html_8cf6c7f4a5400ffc.png)](https://laptrinh.vn/uploads/images/gallery/2019-10/spark-transformation-action.png)
+[![](RackMultipart20210128-4-rq5wjb_html_8cf6c7f4a5400ffc.png)](https://laptrinh.vn/uploads/images/gallery/2019-10/spark-transformation-action.png)
 
 **- Một số transformation:**
 
@@ -126,7 +124,7 @@ Nhiều phiên bản transformation của RDD có thể hoạt động trên cá
 
 Action thực thi ngay các transformation đã được thiết lập để thu thập dữ liệu về driver để xử lý hoặc ghi dữ liệu xuống các công cụ lưu trữ.
 
-- ![](RackMultipart20210128-4-1qj3e0_html_12c68a306560710d.gif) **reduce** : thực hiện hàm reduce trên RDD để thu về 1 giá trị duy nhất
+- **reduce** : thực hiện hàm reduce trên RDD để thu về 1 giá trị duy nhất
 - **count** : đếm số dòng trong RDD
 - **countApprox:** phiên bản đếm xấp xỉ của count, nhưng phải cung cấp timeout vì có thể không nhận được kết quả.
 - **countByValue** : đếm số giá trị của RDD
@@ -154,7 +152,7 @@ Tuy nhiên, bạn có thể chuyển từ DataFrame sang RDD thông qua phương
 
 Điều đầu tiên là DataFrame được phát triển từ SchemaRDD.
 
-![](RackMultipart20210128-4-1qj3e0_html_12c68a306560710d.gif)[![](RackMultipart20210128-4-1qj3e0_html_b4c83a1cadefa9e0.png)](https://i.stack.imgur.com/vSkw0.png)
+[![](RackMultipart20210128-4-rq5wjb_html_b4c83a1cadefa9e0.png)](https://i.stack.imgur.com/vSkw0.png)
 
 Có .. chuyển đổi giữa Dataframe và RDD là hoàn toàn có thể.
 
@@ -189,13 +187,13 @@ val schema = new StructType()
 
 .add(StructField(&quot;col2&quot;, DoubleType, true)) etc...
 
-![](RackMultipart20210128-4-1qj3e0_html_12c68a306560710d.gif)[![](RackMultipart20210128-4-1qj3e0_html_8bb4350eff9944fe.png)](https://i.stack.imgur.com/3rF6p.png)
+[![](RackMultipart20210128-4-rq5wjb_html_8bb4350eff9944fe.png)](https://i.stack.imgur.com/3rF6p.png)
 
-[![](RackMultipart20210128-4-1qj3e0_html_ac9f4412e71d46ab.png)](https://i.stack.imgur.com/6dC6s.png)
+[![](RackMultipart20210128-4-rq5wjb_html_ac9f4412e71d46ab.png)](https://i.stack.imgur.com/6dC6s.png)
 
 ## Api Dataframe
 
-![](RackMultipart20210128-4-1qj3e0_html_12c68a306560710d.gif)Spark 1.3 đã giới thiệu API DataFrame mới như một phần của sáng kiến ​​Dự án Vonfram nhằm tìm cách cải thiện hiệu suất và khả năng mở rộng của Spark. API DataFrame giới thiệu khái niệm lược đồ để mô tả dữ liệu, cho phép Spark quản lý lược đồ và chỉ truyền dữ liệu giữa các nút, theo cách hiệu quả hơn nhiều so với sử dụng tuần tự hóa Java.
+Spark 1.3 đã giới thiệu API DataFrame mới như một phần của sáng kiến ​​Dự án Vonfram nhằm tìm cách cải thiện hiệu suất và khả năng mở rộng của Spark. API DataFrame giới thiệu khái niệm lược đồ để mô tả dữ liệu, cho phép Spark quản lý lược đồ và chỉ truyền dữ liệu giữa các nút, theo cách hiệu quả hơn nhiều so với sử dụng tuần tự hóa Java.
 
 API DataFrame hoàn toàn khác với API RDD vì đây là API để xây dựng kế hoạch truy vấn quan hệ mà trình tối ưu hóa Spark Spark Catalyst có thể thực hiện. API là tự nhiên đối với các nhà phát triển đã quen thuộc với việc xây dựng kế hoạch truy vấn
 
@@ -223,7 +221,7 @@ Ví dụ: khi tạo DataFrame từ một đối tượng RDD hiện có của c�
 - **Ngôn ngữ lập trình được hỗ trợ:**
  [.\_\_.] API Dataframe có sẵn bằng Java, Scala, Python và R.
 
-## ![](RackMultipart20210128-4-1qj3e0_html_12c68a306560710d.gif) Giới hạn khung dữ liệu: -
+## Giới hạn khung dữ liệu: -
 
 - **An toàn loại thời gian biên dịch:** Như đã thảo luận, API Dataframe không hỗ trợ biên dịch an toàn thời gian, điều này hạn chế bạn thao tác dữ liệu khi không biết cấu trúc. Ví dụ sau hoạt động trong thời gian biên dịch. Tuy nhiên, bạn sẽ nhận được một ngoại lệ Runtime khi thực thi mã này.
 
