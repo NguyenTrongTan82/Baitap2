@@ -64,7 +64,7 @@ Khi nói đến điện toán phân tán lặp, tức là xử lý dữ liệu q
 
 Có một vấn đề tiềm ẩn với việc tái sử dụng dữ liệu hoặc chia sẻ dữ liệu trong các hệ thống máy tính phân tán hiện có (như MapReduce) và đó là, bạn cần lưu trữ dữ liệu trong một số cửa hàng phân tán ổn định trung gian như HDFS hoặc Amazon S3. Điều này làm cho việc tính toán tổng thể các công việc chậm hơn vì nó liên quan đến nhiều hoạt động IO, sao chép và tuần tự hóa trong quy trình.
 
-![](RackMultipart20210128-4-rq5wjb_html_1f7499b48eede04c.png)
+![2](https://user-images.githubusercontent.com/47163776/106078820-a3e17980-6146-11eb-84b2-019dacb98815.jpg)
 
 ## Thực thi trên MapRedure
 
