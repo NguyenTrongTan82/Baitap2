@@ -76,11 +76,11 @@ Cả hai ứng dụng Lặp (Iterative) và Tương tác (Interactive) đều y�
 
 **- Iterative Operation trên MapReduce:**
 
-[![](RackMultipart20210128-4-rq5wjb_html_b84b4813d92f827d.jpg)](https://laptrinh.vn/uploads/images/gallery/2019-10/iterative_operations_on_mapreduce.jpg)
+![3](https://user-images.githubusercontent.com/47163776/106079081-210cee80-6147-11eb-95e2-28f9e1f75235.jpg)
 
 **- Interactive Operations trên MapReduce:**
 
-[![](RackMultipart20210128-4-rq5wjb_html_b0375696dc2ecaf0.jpg)](https://laptrinh.vn/uploads/images/gallery/2019-10/interactive_operations_on_mapreduce.jpg)
+![4](https://user-images.githubusercontent.com/47163776/106079090-24a07580-6147-11eb-8f4a-c9bf6985b65d.jpg)
 
 ## Thực thi trên Spark RDD
 
@@ -88,11 +88,11 @@ Cả hai ứng dụng Lặp (Iterative) và Tương tác (Interactive) đều y�
 
 **- Iterative Operation trên Spark RDD:**
 
-[![](RackMultipart20210128-4-rq5wjb_html_314a7b936e00dc37.jpg)](https://laptrinh.vn/uploads/images/gallery/2019-10/iterative_operations_on_spark_rdd.jpg)
+![5](https://user-images.githubusercontent.com/47163776/106079201-5a455e80-6147-11eb-804e-abfae938799b.jpg)
 
 **- Interactive Operations trên Spark RDD:**
 
-[![](RackMultipart20210128-4-rq5wjb_html_31c6760f2cb4625c.jpg)](https://laptrinh.vn/uploads/images/gallery/2019-10/interactive_operations_on_spark_rdd.jpg)
+![6](https://user-images.githubusercontent.com/47163776/106079210-5ca7b880-6147-11eb-966a-b6e31d897377.jpg)
 
 ## Các loại RDD
 
@@ -107,7 +107,7 @@ Cả hai ứng dụng Lặp (Iterative) và Tương tác (Interactive) đều y�
 
 RDD cung cấp các transformation và action hoạt động giống như DataFrame lẫn DataSets. Transformation xử lý các thao tác lazily và Action xử lý thao tác cần xử lý tức thời.
 
-[![](RackMultipart20210128-4-rq5wjb_html_8cf6c7f4a5400ffc.png)](https://laptrinh.vn/uploads/images/gallery/2019-10/spark-transformation-action.png)
+![7](https://user-images.githubusercontent.com/47163776/106079279-806afe80-6147-11eb-887b-698302500c1d.jpg)
 
 **- Một số transformation:**
 
@@ -152,7 +152,7 @@ Tuy nhiên, bạn có thể chuyển từ DataFrame sang RDD thông qua phương
 
 Điều đầu tiên là DataFrame được phát triển từ SchemaRDD.
 
-[![](RackMultipart20210128-4-rq5wjb_html_b4c83a1cadefa9e0.png)](https://i.stack.imgur.com/vSkw0.png)
+![8](https://user-images.githubusercontent.com/47163776/106079281-819c2b80-6147-11eb-8ad8-5f15117cc91c.jpg)
 
 Có .. chuyển đổi giữa Dataframe và RDD là hoàn toàn có thể.
 
@@ -187,9 +187,9 @@ val schema = new StructType()
 
 .add(StructField(&quot;col2&quot;, DoubleType, true)) etc...
 
-[![](RackMultipart20210128-4-rq5wjb_html_8bb4350eff9944fe.png)](https://i.stack.imgur.com/3rF6p.png)
+![9](https://user-images.githubusercontent.com/47163776/106079406-ba3c0500-6147-11eb-8963-3375561371d0.jpg)
 
-[![](RackMultipart20210128-4-rq5wjb_html_ac9f4412e71d46ab.png)](https://i.stack.imgur.com/6dC6s.png)
+![10](https://user-images.githubusercontent.com/47163776/106079407-bb6d3200-6147-11eb-99e6-273440254089.jpg)
 
 ## Api Dataframe
 
@@ -248,3 +248,11 @@ val personRDD = sc.makeRDD(Seq(Person(&quot;A&quot;,10),Person(&quot;B&quot;,20)
 val personDF = sqlContext.createDataframe(personRDD)
 
 personDF.rdd // returns RDD[Row] , does not returns RDD[Person]
+
+## Các nguồn tham khảo:
+
+[https://spark.apache.org/docs/latest/configuration.html#spark-properties](https://spark.apache.org/docs/latest/configuration.html#spark-properties)
+[https://www.it-swarm-vi.com/vi/apache-spark/su-khac-biet-giua-dataframe-dataset-va-rdd-trong-spark/1054639227/](https://www.it-swarm-vi.com/vi/apache-spark/su-khac-biet-giua-dataframe-dataset-va-rdd-trong-spark/1054639227/)
+[https://laptrinh.vn/books/apache-spark/page/apache-spark-rdd](https://laptrinh.vn/books/apache-spark/page/apache-spark-rdd)
+[https://helpex.vn/article/rdd-trong-spark-la-gi-va-tai-sao-chung-ta-can-no-5c6afe5bae03f628d053a84c](https://helpex.vn/article/rdd-trong-spark-la-gi-va-tai-sao-chung-ta-can-no-5c6afe5bae03f628d053a84c)
+
